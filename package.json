@@ -1,0 +1,28 @@
+{
+  "name": "gallery-component",
+  "version": "0.0.0",
+  "description": "A gallery component with styling and HTML using Sass/CSS, CSS Modules, and Web Components",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/onishiweb/gallery-component.git"
+  },
+  "keywords": [
+    "web",
+    "components",
+    "css",
+    "modules"
+  ],
+  "author": "Adam Onishi",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/onishiweb/gallery-component/issues"
+  },
+  "homepage": "https://github.com/onishiweb/gallery-component#readme",
+  "dependencies": {
+    "webcomponents.js": "^0.7.22"
+  }
+}
