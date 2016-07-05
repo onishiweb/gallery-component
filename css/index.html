@@ -9,8 +9,42 @@
 		<title>Gallery component - CSS example</title>
 
 		<link rel="stylesheet" href="/assets/css/main.css">
+		<link rel="stylesheet" href="gallery.css">
+		<script src="gallery.js" async defer></script>
 	</head>
 	<body>
-		<h1>Gallery with Vanilla CSS</h1>
+		<div class="container">
+			<h1>Gallery with Vanilla CSS</h1>
+
+			<div class="o-gallery" o-gallery>
+				<ul class="o-gallery__content">
+					<li class="o-gallery__slide">
+						<figure class="o-gallery__figure">
+							<img src="http://www.fillmurray.com/800/450" alt="Fill Murray" class="o-gallery__image">
+							<figcaption class="o-gallery__caption">
+								This is an image caption
+							</figcaption>
+						</figure>
+					</li>
+					<li class="o-gallery__slide">
+						<figure class="o-gallery__figure">
+							<img src="http://www.stevensegallery.com/800/450" alt="Steven Segallery" class="o-gallery__image">
+							<figcaption class="o-gallery__caption">
+								This is an image caption
+							</figcaption>
+						</figure>
+					</li>
+					<li class="o-gallery__slide">
+						<figure class="o-gallery__figure">
+							<img src="https://www.placecage.com/800/450" alt="PlaceCage" class="o-gallery__image">
+							<figcaption class="o-gallery__caption">
+								This is an image caption
+							</figcaption>
+						</figure>
+					</li>
+				</ul>
+			</div>
+		</div>
+
 	</body>
 </html>
