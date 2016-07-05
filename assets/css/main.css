@@ -5,11 +5,17 @@ body {
 	background-color: #fff1e0;
 	font-family: Helvetica, Arial, sans-serif;
 	font-size: 16px;
-	color: #505050;
+	color: #333;
 }
 
 h1,
 h2,
 h3 {
 	font-family: Georgia, serif;
+}
+
+.container {
+	width: 90%;
+	max-width: 60em;
+	margin: 0 auto;
 }
