@@ -4,6 +4,12 @@
 	background-color: #333;
 }
 
+.o-gallery__wrapper {
+	position: relative;
+	width: 100%;
+	overflow: hidden;
+}
+
 .o-gallery__content {
 	list-style: none;
 	margin: 0;
@@ -28,6 +34,8 @@
 .o-gallery__caption {
 	padding: 5px 0 10px;
 	color: #fff;
+	font-size: 14px;
+	font-style: italic;
 }
 
 .o-gallery__control {
