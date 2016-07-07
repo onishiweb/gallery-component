@@ -1,7 +1,7 @@
 class oGallery {
 	constructor(element) {
 		this.gallery = element;
-
+		this.galleryContent = this.gallery.querySelector('.o-gallery__content');
 		this.slides = this.gallery.querySelectorAll('.o-gallery__slide');
 
 		this.totalItems = this.slides.length;
@@ -17,17 +17,16 @@ class oGallery {
 	}
 
 	imagesReady() {
-		let maxHeight = 0;
 		let images = [];
 
 		for (let slide of this.slides) {
 			const loadedPromise = new Promise((resolve, reject) => {
-						const img = slide.querySelector('.o-gallery__image');
+				const img = slide.querySelector('.o-gallery__image');
 
-						img.onload = function() {
-							resolve(slide.offsetHeight);
-						}
-					});
+				img.onload = function() {
+					resolve(slide.offsetHeight);
+				}
+			});
 
 			images.push(loadedPromise);
 		}
@@ -40,6 +39,7 @@ class oGallery {
 
 		this.wrapper = document.createElement('div');
 		this.wrapper.className = 'o-gallery__wrapper';
+		this.wrapper.style.height = this.maxHeight + 'px';
 
 		content.parentNode.insertBefore(this.wrapper, content);
 
@@ -49,8 +49,23 @@ class oGallery {
 	initView() {
 		this.wrapSlides();
 
-		console.log('width', this.maxWidth);
-		console.log('max height', this.maxHeight);
+		const viewBoxes = (this.totalItems / this.visible);
+
+		if( viewBoxes > 1 ) {
+			this.addControls();
+
+			this.galleryContent.classList.add('o-gallery__content--active');
+			this.galleryContent.style.width = (viewBoxes * 100) + '%';
+
+			for (let slide of this.slides) {
+				slide.style.float = 'left';
+				slide.style.width = (100 / viewBoxes) + '%';
+			}
+		}
+	}
+
+	addControls() {
+
 	}
 }
 

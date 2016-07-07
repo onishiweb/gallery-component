@@ -16,6 +16,12 @@
 	padding: 0;
 }
 
+.o-gallery__content--active {
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
 .o-gallery__slide {
 	margin: 0;
 }
