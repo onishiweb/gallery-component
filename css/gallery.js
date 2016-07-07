@@ -6,6 +6,7 @@ class oGallery {
 
 		this.totalItems = this.slides.length;
 		this.visible = this.gallery.getAttribute('data-o-gallery-visible') || 1;
+		this.currentPos = 0;
 
 		this.maxWidth = this.slides[0].offsetWidth;
 		this.maxHeight = 0;
@@ -73,20 +74,26 @@ class oGallery {
 		this.wrapper.appendChild(this.controlLeft);
 		this.wrapper.appendChild(this.controlRight);
 
-		this.controlRight.addEventListener('click', evt => this.scrollLeft(evt));
-		this.controlLeft.addEventListener('click', evt => this.scrollRight(evt));
+		this.controlRight.addEventListener('click', evt => this.scrollRight(evt));
+		this.controlLeft.addEventListener('click', evt => this.scrollLeft(evt));
+	}
+
+	updateScrollPos() {
+		this.galleryContent.style.left = (this.currentPos * -100) + '%';
 	}
 
 	scrollLeft() {
-		let currentLeft = parseInt(this.galleryContent.style.left);
-
-		this.galleryContent.style.left = (currentLeft - 100) + '%';
+		if (this.currentPos > 0) {
+			this.currentPos = this.currentPos - 1;
+			this.updateScrollPos();
+		}
 	}
 
 	scrollRight() {
-		let currentLeft = parseInt(this.galleryContent.style.left);
-
-		this.galleryContent.style.left = (currentLeft + 100) + '%';
+		if (this.currentPos < (this.totalItems - 1)) {
+			this.currentPos = this.currentPos + 1;
+			this.updateScrollPos();
+		}
 	}
 }
 

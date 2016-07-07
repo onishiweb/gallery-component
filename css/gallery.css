@@ -19,6 +19,7 @@
 .o-gallery__content--active {
 	position: absolute;
 	top: 0;
+	transition: left 0.4s ease-in;
 }
 
 .o-gallery__slide {
