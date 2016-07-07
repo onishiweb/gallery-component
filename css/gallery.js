@@ -65,7 +65,14 @@ class oGallery {
 	}
 
 	addControls() {
+		this.controlLeft = document.createElement('button');
+		this.controlLeft.className = 'o-gallery__control o-gallery__control--left';
 
+		this.controlRight = document.createElement('button');
+		this.controlRight.className = 'o-gallery__control o-gallery__control--right';
+
+		this.wrapper.appendChild(this.controlLeft);
+		this.wrapper.appendChild(this.controlRight);
 	}
 }
 
