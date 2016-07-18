@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+	<html>
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+
+		<title>Gallery component - CSS Modules example</title>
+
+		<link rel="stylesheet" href="styles.css">
+		<script src="main.js" async defer></script>
+	</head>
+	<body class="body">
+
+		<div class="container">
+			<h1 class="heading">Gallery with Vanilla CSS</h1>
+
+			<div class="<%= className('styles', 'gallery') %>" o-gallery>
+				<ul class="<%= className('styles', 'content') %>">
+					<li class="<%= className('styles', 'slide') %>">
+						<figure class="<%= className('styles', 'figure') %>">
+							<img src="http://www.fillmurray.com/800/450" alt="Fill Murray" class="<%= className('styles', 'image') %>">
+							<figcaption class="<%= className('styles', 'caption') %>">
+								This is an image caption
+							</figcaption>
+						</figure>
+					</li>
+					<li class="<%= className('styles', 'slide') %>">
+						<figure class="<%= className('styles', 'figure') %>">
+							<img src="http://www.stevensegallery.com/800/450" alt="Steven Segallery" class="<%= className('styles', 'image') %>">
+							<figcaption class="<%= className('styles', 'caption') %>">
+								This is an image caption
+							</figcaption>
+						</figure>
+					</li>
+					<li class="<%= className('styles', 'slide') %>">
+						<figure class="<%= className('styles', 'figure') %>">
+							<img src="https://www.placecage.com/800/450" alt="PlaceCage" class="<%= className('styles', 'image') %>">
+							<figcaption class="<%= className('styles', 'caption') %>">
+								This is an image caption
+							</figcaption>
+						</figure>
+					</li>
+				</ul>
+			</div>
+		</div>
+
+	</body>
+</html>
